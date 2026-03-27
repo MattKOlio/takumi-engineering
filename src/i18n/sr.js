@@ -166,6 +166,7 @@ const sr = {
     form_submit: 'Pošaljite poruku',
     form_sending: 'Slanje…',
     form_success: 'Hvala! Javićemo vam se uskoro.',
+    form_error: 'Došlo je do greške. Pokušajte ponovo ili nas kontaktirajte direktno.',
   },
   footer: {
     tagline: 'Inženjerska preciznost. Poverenje koje traje.',

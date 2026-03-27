@@ -166,6 +166,7 @@ const de = {
     form_submit: 'Nachricht senden',
     form_sending: 'Wird gesendet…',
     form_success: 'Vielen Dank! Wir melden uns in Kürze.',
+    form_error: 'Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut oder kontaktieren Sie uns direkt.',
   },
   footer: {
     tagline: 'Ingenieurtechnische Präzision. Vertrauen, das trägt.',

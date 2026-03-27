@@ -166,6 +166,7 @@ const en = {
     form_submit: 'Send Message',
     form_sending: 'Sending…',
     form_success: 'Thank you! We\'ll be in touch shortly.',
+    form_error: 'Something went wrong. Please try again or email us directly.',
   },
   footer: {
     tagline: 'Engineering precision. Building trust.',

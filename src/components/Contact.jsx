@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import emailjs from '@emailjs/browser'
 import { motion } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
 import {
@@ -10,14 +11,26 @@ import { fadeUp, slideLeft, slideRight, viewportConfig } from '../utils/animatio
 export default function Contact() {
   const { t } = useTranslation()
   const [form, setForm] = useState({ name: '', email: '', subject: '', message: '' })
-  const [status, setStatus] = useState('idle') // idle | sending | success
+  const [status, setStatus] = useState('idle') // idle | sending | success | error
 
   const handleChange = e => setForm(f => ({ ...f, [e.target.name]: e.target.value }))
 
   const handleSubmit = e => {
     e.preventDefault()
     setStatus('sending')
-    setTimeout(() => setStatus('success'), 1500)
+    emailjs.send(
+      'service_9qmoljt',
+      'template_c5h9hgj',
+      {
+        from_name:  form.name,
+        from_email: form.email,
+        subject:    form.subject,
+        message:    form.message,
+      },
+      'OzxcOfyDGV8a2Ldck'
+    )
+      .then(() => setStatus('success'))
+      .catch(() => setStatus('error'))
   }
 
   const infoItems = [
@@ -136,6 +149,9 @@ export default function Contact() {
                     required
                   />
                 </div>
+                {status === 'error' && (
+                  <p className="contact__error">{t('contact.form_error')}</p>
+                )}
                 <button
                   type="submit"
                   className="btn btn--primary contact__submit"

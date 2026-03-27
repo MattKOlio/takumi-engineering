@@ -1366,6 +1366,12 @@
   font-weight: 500;
 }
 
+.contact__error {
+  color: #c0392b;
+  font-size: 0.9rem;
+  margin-bottom: 0.75rem;
+}
+
 
 /* ============================================================
    FOOTER
