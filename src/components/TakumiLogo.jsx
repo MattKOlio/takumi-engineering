@@ -59,7 +59,7 @@ export default function TakumiLogo({ theme = 'light', size = 'md', forceWhite = 
             fontFamily: "'Montserrat', sans-serif",
             fontWeight: 700,
             fontSize: subSize,
-            letterSpacing: '0.18em',
+            letterSpacing: '0.26em',
             color: forceWhite ? 'rgba(255,255,255,0.7)' : colors.gray,
             textTransform: 'uppercase',
             marginTop: 3,
